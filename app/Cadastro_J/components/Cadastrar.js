@@ -1,6 +1,6 @@
 function Cadastrar() {
     return ( 
-        <div>
+        <div className=" bg-[#1B2020] text-slate-100 -my-6 -mx-2 " >
 
         <h1>Crie sua Conta SONUS</h1>
         <p>Crie uma conta para ficar por dentro de tudo sobre o mundo das músicas!</p>
