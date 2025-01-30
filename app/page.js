@@ -8,7 +8,7 @@ export default function Home() {
     
 <h1>Seus amigos vão gostar disso!!</h1>
 
-<div>
+<div className="border-solid border w-1/5 bg-zinc-50 p-5 ">
 
 <Musica/>
 
@@ -17,7 +17,7 @@ export default function Home() {
 <div>
 
   <Noticias/>
-  
+
 </div>
 
 
