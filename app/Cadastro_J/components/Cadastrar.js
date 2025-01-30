@@ -1,10 +1,10 @@
 function Cadastrar() {
     return ( 
-        <div className=" bg-[#1B2020] text-slate-100 -my-6 -mx-2 " >
+        <div className=" bg-[#020202] text-slate-100 -my-6 -mx-2 " >
 
         <h1>Crie sua Conta SONUS</h1>
         <p>Crie uma conta para ficar por dentro de tudo sobre o mundo das músicas!</p>
-        <p>Você já tem uma conta? acesse seu painel: <a href="J_entrar.html" >clique aqui</a> </p>
+        <p>Você já tem uma conta? acesse seu painel: <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#" >clique aqui</a> </p>
 
         <form/>
         
