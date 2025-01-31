@@ -1,10 +1,10 @@
-import Cabecalho from "../albuns_N/components/Cabecalho";
+
 import Artistas from "./components/Artistas";
 
 function Artista () {
     return ( 
-        <div className="bg-zinc-500">
-        <Cabecalho/>
+        <div className=" bg-zinc-500">
+        
 
         <Artistas nome="Black Sabbath"/>
         <Artistas nome="The Weeknd"/>
