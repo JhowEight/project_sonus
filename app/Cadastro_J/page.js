@@ -5,7 +5,6 @@ function Cadastro() {
     return ( 
         <div>
 
-        <Menu/>
         <Cadastrar/>
 
         </div>
