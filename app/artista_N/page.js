@@ -3,7 +3,7 @@ import Artistas from "./components/Artistas";
 
 function Artista () {
     return ( 
-        <div>
+        <div className="bg-zinc-500">
         <Cabecalho/>
 
         <Artistas nome="Black Sabbath"/>
