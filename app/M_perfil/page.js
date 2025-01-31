@@ -1,84 +1,86 @@
+import Menu_Avaliacao from "../M_avaliacao/components/Menu_Avaliacao";
+
 function Perfil() {
     return ( 
 
         <div>
-                <div>
+
+            <Menu_Avaliacao/>
+            <hr/>
+            <br/>
+            <h2>Perfil</h2>
+                <div className="flex">
                     <br/>
-                    <h2>Perfil</h2>
-                    Nome:
-                    <br/>
-                    <br/>
-                    <br/>
+                    <img src="https://placehold.co/150" />
+                    <div>
+                       <div className="ml-24">
+                            <p>Nome:</p>
+                            <p>Nickname:</p>
+                            <p>E-mail:</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>   
                 </div>
 
                 <div>
-                    <label>Foto de perfil: </label>
-                    <br/>
-                    <br/>
-                    <img class="foto" width="100" src="https://placehold.co/100"/>
                     <br/>
                     <br/>
                     <br/>
-                </div>
-
-                <div>
-                    Nickname:
-                    <br/>
-                    <br/>
-                    <br/>
-                </div>
-
-                <div>
-                    <p>E-mail:</p>
-                    <br/>
-                    <br/>
-                </div>
-
-                <div>
-                    <h2 class="foto">Conquistas</h2>
+                    <h2>Conquistas</h2>
                 </div>
                 
-                <div class="centro">
-                    <div class="">
+                <div className="flex">
                     <br/>
-                    <img class="ft" width="100" src="https://placehold.co/100"/>
-                    <p class="tm">Viciado em recomendações</p>
-                    <p>Você recomendou músicas para 20 amigos</p>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div> 
+                        <div className="ml-16"> 
+                        <p>Viciado em Recomendações</p>
+                        <p>Você recomendou músicas para 20 amigos</p>
+                        <br/>
+                        <br/>
+                        </div>  
                     </div>
                 </div>
 
-                <div class="">
+                <div className="flex">
                     <br/>
-                    <img class="ft" width="100" src="https://placehold.co/100"/>
-                    <p class="tm">Avaliando Álbuns</p>
-                    <p>Avaliou seu primeiro álbum</p>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div >
+                        <div className="ml-16">
+                            <p>Avaliando Álbuns</p>
+                            <p>Avaliou seu primeiro álbum</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
+                <div className="flex">
                     <br/>
-                    <img class="ft" width="100" src="https://placehold.co/100"/>
-                    <p class="tm">Alquimista da Música</p>
-                    <p> Você mistura e experimenta recomendções de diferentes gêneros</p>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <img src="https://placehold.co/100"/>
+                        <div>
+                            <div className="ml-16">
+                            <p>Alquimista da Música</p>
+                            <p> Você mistura e experimenta recomendções de diferentes gêneros</p>
+                            <br/>
+                            <br/>
+                            </div>
+                        </div>
                 </div>
 
-                <div>
+                <div className="flex">
                     <br/>
-                    <img class="ft" width="100" src="https://placehold.co/100"/>
-                    <p class="tm">Explorador Sonoro</p>
-                    <p>Você está sempre recomendando novas músicas e estilos</p>
-                    <br/>
-                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-16">
+                            <p>Explorador Sonoro</p>
+                            <p>Você sempre recomenda novas músicas e estilos</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
                 </div>
-            
         </div>
 
      );
