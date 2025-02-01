@@ -1,17 +1,13 @@
-export default function Menu_Avaliacao(){
+export default function Cabecalho(){
     return(
-        <div className="flex justify-between p-4">
-            <h1>SONUS</h1>
-            <div>
-                <div className=" gap-10 flex space-between text-center">
-                <a href="./I_pagina_inicial">Início</a>
-                <a href="">Login</a>
-                <a href="./J_cadastrar">Cadastrar</a>
-                <a href="./M_avaliacao">Avaliação</a>
-                <a href="./J_suporte">Suporte</a>
-                </div>
-            </div>
 
+        <div className="Menu -my-2 -mx-2 bg-[#362D58] text-slate-100 "  >   
+            <h1>  SONUS </h1>
+            <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#" >Início</a>
+            <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#" >Entrar</a> 
+            <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#">Cadastrar</a>
+            <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#" > Perfil </a>
+            <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 " href="#" >Contato</a>   
         </div>
     );
 }
