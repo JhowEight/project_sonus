@@ -120,7 +120,7 @@ function Perfil() {
 
             <br/>
 
-            <div className="flex">
+              {/*<div className="flex justify-around">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -131,7 +131,20 @@ function Perfil() {
                         <br/>
                     </div>
                 </div>
+
+
+               <div className="flex">
+                <img src="https://placehold.co/100"/>
+                    <div className="ml-16">
+                        <p>Compartilhando Melodias</p>
+                        <p>Você compartilhou 10 músicas em suas redes sociais</p>
+                        <br/>
+                        <br/>
+                    </div>
+                </div> 
+                
             </div>
+            Exemplo de como colocar uma div do lado da outra*/}
 
             <br/>
 
