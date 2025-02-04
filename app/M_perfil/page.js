@@ -26,141 +26,179 @@ function Perfil() {
                 <br/>
                 <br/>
                 <br/>
+                <br/>
+                <br/>
+                <br/>
                 <h2>Conquistas</h2>
             </div>
                 
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/100"/>
-                <div> 
-                    <div className="ml-16"> 
-                        <p>Viciado em Recomendações</p>
-                        <p>Recomendou músicas para 20 amigos</p>
-                        <br/>
-                        <br/>
-                        <br/>
-                    </div>  
-                </div>
-            </div>
-
-            <br/>
-
-            <div className="flex">
+            <div className="justify-between flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
-                    <div className="ml-16">
-                        <p>Avaliando Álbuns</p>
-                        <p>Avaliou seu primeiro álbum</p>
+                    <div className="ml-8">
+                        <p className="mr-6">Viciado em Recomendações </p>
+                        <p className="mr-">Recomendou músicas para 20 amigos</p>
                         <br/>
                         <br/>
                     </div>
                 </div>
-            </div>
 
-            <br/>
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Avaliando Álbuns</p>
+                            <p className="mr-6">Avaliou seu primeiro álbum</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
 
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/100"/>
-                <div>
-                    <div className="ml-16">
-                        <p>Alquimista da Música</p>
-                        <p> Você mistura e experimenta recomendções de diferentes gêneros</p>
-                        <br/>
-                        <br/>
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Alquimista da Música</p>
+                            <p className="mr-6">Você mistura e experimenta recomendações de diferentes gêneros</p>
+                            <br/>
+                            <br/>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <br/>
+            <br/>
 
-            <div className="flex">
+
+            <div className="justify-around flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
-                    <div className="ml-16">
-                        <p>Explorador Sonoro</p>
-                        <p>Você sempre recomenda novas músicas e estilos</p>
+                    <div className="ml-8">
+                        <p className="mr-6">Explorador Sonoro</p>
+                        <p className="mr-6">Sempre recomenda novas músicas e estilos</p>
                         <br/>
                         <br/>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Curador de títulos</p>
+                            <p className="mr-6">Recomendou 5 álbuns completos para os seus amigos</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Desbravador Musical</p>
+                            <p className="mr-6">Ouviu músicas de 20 artistas de diferentes países</p>
+                            <br/>
+                            <br/>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <br/>
-
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/100"/>
-                <div>
-                    <div className="ml-16">
-                        <p>Curador de títulos</p>
-                        <p>Recomendou 5 álbuns completos para os seus amigos</p>
-                        <br/>
-                        <br/>
-                    </div>
-                </div>
-            </div>
-
             <br/>
 
-            <div className="flex">
+            <div className="justify-around flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
-                    <div className="ml-16">
-                        <p>Mestre dos Sons</p>
-                        <p>Você criou sua primeira playlist</p>
+                    <div className="ml-8">
+                        <p className="mr-6">Compartilhando Melodias</p>
+                        <p className="mr-6">Compartilhou 10 músicas em suas redes sociais</p>
                         <br/>
                         <br/>
                     </div>
                 </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Mestre dos Sons </p>
+                            <p className="mr-6">Você criou sua primeira playlist</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Rei da Curadoria </p>
+                            <p className="mr-6">Recomendou músicas para 20 amigos</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            {/* <div className="justify-around flex">
+                <br/>
+                <img src="https://placehold.co/100"/>
+                <div>
+                    <div className="ml-8">
+                        <p className="mr-6"></p>
+                        <p className="mr-6"></p>
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6"></p>
+                            <p className="mr-6"></p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6"></p>
+                            <p className="mr-6"></p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            Para as div's uma do lado da outra
+            */}
 
             <br/>
-
-              {/*<div className="flex justify-around">
-                <br/>
-                <img src="https://placehold.co/100"/>
-                <div>
-                    <div className="ml-16">
-                        <p>Desbravador Musical</p>
-                        <p>Ouviu músicas de 20 artistas de diferentes países</p>
-                        <br/>
-                        <br/>
-                    </div>
-                </div>
-
-
-               <div className="flex">
-                <img src="https://placehold.co/100"/>
-                    <div className="ml-16">
-                        <p>Compartilhando Melodias</p>
-                        <p>Você compartilhou 10 músicas em suas redes sociais</p>
-                        <br/>
-                        <br/>
-                    </div>
-                </div> 
-                
-            </div>
-            Exemplo de como colocar uma div do lado da outra*/}
-
-            <br/>
-
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/100"/>
-                <div>
-                    <div className="ml-16">
-                        <p>Compartilhando Melodias</p>
-                        <p>Você compartilhou 10 músicas em suas redes sociais</p>
-                        <br/>
-                        <br/>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
      );
