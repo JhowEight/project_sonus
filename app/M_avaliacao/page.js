@@ -58,7 +58,7 @@ function Avaliacao() {
                     <img src="https://m.media-amazon.com/images/I/712nD2NH-zL._AC_SY355_.jpg"/> 
                     <br/>
                     <br/>
-                    <p>Álbum: Paranoid (18/09/1970)</p>
+                    <p className="text-slate-100">Álbum: Paranoid (18/09/1970)</p>
                     <br/>
                     <br/>
                     <div>
@@ -67,7 +67,7 @@ function Avaliacao() {
                         <button onClick={()=>setStar(3)}>⭐</button>
                         <button onClick={()=>setStar(4)}>⭐</button>
                         <button onClick={()=>setStar(5)}>⭐</button>
-                        <p>{rating.star}</p>
+                        <p className="text-slate-100">{rating.star}</p>
                     </div>     
                 </div>
             </div>
@@ -80,7 +80,7 @@ function Avaliacao() {
 
             <div>
                 <div className="flex justify-center">
-                    <p>O que você achou da recomendação da música / do álbum?</p>
+                    <p className="text-slate-100">O que você achou da recomendação da música / do álbum?</p>
                 </div>
 
                 <div className="flex justify-center">
