@@ -10,7 +10,7 @@ function Cadastro() {
     const user = {
         id: "",
         email: "",
-        senha: ""
+        senha: "",
     };
 
     const [usuario, setUsuario] = useState({
