@@ -51,8 +51,8 @@ function Perfil() {
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
-                    <div className="">
-                        <p className="">Playlist 1</p>
+                    <div className="ml-8">
+                        <p className="mr-6">Playlist 1</p>
                         <br/>
                         <br/>
                     </div>
@@ -118,7 +118,7 @@ function Perfil() {
                 <div>
                     <div className="ml-8">
                         <p className="mr-6">Viciado em Recomendações </p>
-                        <p className="mr-6">Recomendou músicas para 20 amigos</p>
+                        <p className="mr-6">Recomendou músicas para mais de 20 amigos</p>
                         <br/>
                         <br/>
                     </div>
@@ -143,7 +143,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Alquimista da Música</p>
-                            <p className="mr-6">Você mistura e experimenta recomendações de diferentes gêneros</p>
+                            <p className="mr-6">Você mistura e experimenta recomendações de vários gêneros</p>
                             <br/>
                             <br/>
                         </div>
@@ -173,7 +173,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Curador de títulos</p>
-                            <p className="mr-6">Recomendou 5 álbuns completos para os seus amigos</p>
+                            <p className="mr-6">Recomendou 5 álbuns para os seus amigos</p>
                             <br/>
                             <br/>
                         </div>
@@ -216,7 +216,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Mestre dos Sons</p>
-                            <p className="mr-6">Você criou sua primeira playlist</p>
+                            <p className="mr-6">Você criou sua primeira playlist de músicas</p>
                             <br/>
                             <br/>
                         </div>
@@ -228,8 +228,8 @@ function Perfil() {
                     <img src="https://placehold.co/100"/>
                     <div>
                         <div className="ml-8">
-                            <p className="mr-6">Rei da Curadoria</p>
-                            <p className="mr-6">Recomendou músicas para 20 amigos</p>
+                            <p className="mr-6">Explorador de Estilos</p>
+                            <p className="mr-6">Explorou músicas de diferentes décadas e estilos musicais.</p>
                             <br/>
                             <br/>
                         </div>
