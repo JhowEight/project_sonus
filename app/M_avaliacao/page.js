@@ -3,11 +3,18 @@
 import Cabecalho from "../components/Cabecalho";
 import { useState } from 'react';
 
-
 function Avaliacao() {
     
     // const [star, setStar] = useState(0)
     // const [rate, setRate] = useState("Fenomenal!!! Um dos melhores álbuns de todos os tempos")
+
+    const rated = {
+        id: 0,
+        albumname: "Paranoid",
+        releasedate: "18/09/1970",
+        stars: "5",
+        comment: "Incrível!!! Um dos melhores álbuns de rock de todos os tempos"
+    }
 
     const [rating, setRating]= useState({
         star: 0,
@@ -45,7 +52,7 @@ function Avaliacao() {
             <br/>
             <br/>  
 
-            <h2 className="text-center">Avalie a sua música / o seu álbum</h2>
+            <h2 className="text-center text-slate-100">Avalie a sua música / o seu álbum</h2>
             <div className=" flex justify-center">
                 <div className="text-center">
                     <img src="https://m.media-amazon.com/images/I/712nD2NH-zL._AC_SY355_.jpg"/> 
