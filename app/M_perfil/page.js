@@ -5,11 +5,13 @@ import Cabecalho from "../components/Cabecalho";
 
 function Perfil() {
 
-    const [name,setName] = useState("Matheus");
-    const [nickname,setNickname] = useState("Theu123");
-    const [followers,setFollowers] = useState("25");
-    const [follow,setFollow] = useState("30");
+    const [name] = useState("Matheus")
+    const [nickname] = useState("Theu123");
+    const [followers] = useState("25");
+    const [follow] = useState("30");
 
+    
+//  const [variável] = useState({}); ==> Quando tem que por um objeto anônimo, se coloca uma chave ({}) vazia para atribuir um valor.
 
     return ( 
 
@@ -22,6 +24,7 @@ function Perfil() {
                 <img src="https://placehold.co/150" />
                 <div>
                     <div className="ml-24 text-center">
+                        {/* Quando se cria um variável dentro do objeto se referencia à eles como: objeto.variável */}
                         <p>Nome: {name} </p>
                         <br/>
                         <br/>
@@ -40,7 +43,10 @@ function Perfil() {
             <br/>
             <br/>
             <h2>Playlists criadas</h2>
-
+            
+            <br/>
+            <br/>
+            <br/>
             <div className="flex justify-around">
                 <br/>
                 <img src="https://placehold.co/100"/>
@@ -56,13 +62,38 @@ function Perfil() {
                     <br/>
                     <img src="https://placehold.co/100"/>
                     <div>
-                        <div className="ml-6">
-                            <p className="mr-2">Playlist 2</p>
+                        <div className="ml-8">
+                            <p className="mr-6">Playlist 2</p>
                             <br/>
                             <br/>
                         </div>
                     </div>
                 </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Playlist 3</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="flex">
+                    <br/>
+                    <img src="https://placehold.co/100"/>
+                    <div>
+                        <div className="ml-8">
+                            <p className="mr-6">Playlist 4</p>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -73,9 +104,13 @@ function Perfil() {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
                 <h2>Conquistas</h2>
             </div>
+
+            <br/>
+                <br/>
+                <br/>
+                <br/>
                 
             <div className="justify-between flex">
                 <br/>
@@ -83,7 +118,7 @@ function Perfil() {
                 <div>
                     <div className="ml-8">
                         <p className="mr-6">Viciado em Recomendações </p>
-                        <p className="mr-">Recomendou músicas para 20 amigos</p>
+                        <p className="mr-6">Recomendou músicas para 20 amigos</p>
                         <br/>
                         <br/>
                     </div>
@@ -118,7 +153,7 @@ function Perfil() {
 
             <br/>
             <br/>
-
+            <br/>
 
             <div className="justify-around flex">
                 <br/>
@@ -161,6 +196,7 @@ function Perfil() {
 
             <br/>
             <br/>
+            <br/>
 
             <div className="justify-around flex">
                 <br/>
@@ -201,7 +237,9 @@ function Perfil() {
                 </div>
             </div>
 
-
+            <br/>
+            <br/>
+            <br/>
 
             <div className="justify-around flex">
                 <br/>
@@ -242,6 +280,10 @@ function Perfil() {
                 </div>
             </div>
 
+            <br/>
+            <br/>
+            <br/>
+
             <div className="justify-around flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
@@ -260,7 +302,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Conectando Gêneros</p>
-                            <p className="mr-6">Conectou dois estilos musicais inesperados em uma playlist.</p>
+                            <p className="mr-6">Juntou dois estilos musicais inesperados em uma playlist.</p>
                             <br/>
                             <br/>
                         </div>
@@ -281,6 +323,9 @@ function Perfil() {
                 </div>
             </div>
 
+            <br/>
+            <br/>
+            <br/>
 
             {/* <div className="justify-around flex">
                 <br/>
@@ -325,8 +370,8 @@ function Perfil() {
             */}
 
             <br/>
+            <br/>
         </div>
-
      );
 }
 
