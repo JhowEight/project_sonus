@@ -60,17 +60,20 @@ function Artista () {
     ]);
 
     return ( 
-        <div className="flex bg-stone-950">
-        
+        <div>
+
             <br/>
             <h2 className=" text-white "> Artistas</h2>
 
-{
-    musicos.map( (i)=>
-    
-    <Artistas nome={i.nome}  genero={i.genero} imagem={i.imagem} />
-    )
-}
+            <div className="flex bg-stone-950">         
+
+                {
+                    musicos.map( (i)=>
+                    <Artistas nome={i.nome}  genero={i.genero} imagem={i.imagem} />
+                    )
+                }
+
+            </div>
 
         </div>
      );
