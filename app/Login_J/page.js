@@ -29,8 +29,7 @@ function Login() {
         usuarios.map((u)=>{
         
         if(u.email == email && u.senha == senha){
-            console.log("Email Logado:"+u.email);
-            console.log("Senha Logado:"+u.senha);
+            console.log(" Logado");
         }}
     )};
 
