@@ -4,12 +4,12 @@ function Musica(attr) {
     return (  
 
 
-        <div className="musica border-solid bg-purple-800 rounded-xl">
+        <div className="musica border-solid bg-purple-800 rounded-xl  ">
 
             <div>
-            <button> <img src={"imagens/"+attr.src}/>  </button>
-            <h3> {attr.nomemusica} <b/></h3>  
-            <p>{attr.comentario} </p> 
+            <button> <img src={attr.imagem}/>  </button>
+            <h3> {attr.nomeMusica} <b/></h3>  
+            <p>{attr.artista} </p> 
          
             
             </div>    
