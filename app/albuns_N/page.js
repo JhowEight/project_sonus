@@ -1,13 +1,13 @@
-import Cabecalho from "./components/Cabecalho";
+
+import Cabecalho from "../components/Cabecalho";
 import Albuns from "./components/Albuns";
 
 function Albuns_N () {
     return (
-<div>   
-<Cabecalho/>
+<div className="flex">   
 
 <h2> Albúns </h2>
-<div className="flex">
+<div className="">
 <Albuns nome="Black Sabbath"/>
 <Albuns nome="Paranoid"/>
 <Albuns nome="Master of Reality"/>
