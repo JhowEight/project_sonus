@@ -8,17 +8,22 @@ function Avaliacao() {
     // const [star, setStar] = useState(0)
     // const [rate, setRate] = useState("Fenomenal!!! Um dos melhores álbuns de todos os tempos")
 
-    const rated = {
-        id: 0,
-        albumname: "Paranoid",
-        releasedate: "18/09/1970",
-        stars: "5",
-        comment: "Incrível!!! Um dos melhores álbuns de rock de todos os tempos"
-    }
+    const [avaliar, setAvaliar] = useState(
+        {
+            id: 0,
+            image: "https://m.media-amazon.com/images/I/712nD2NH-zL._AC_SY355_.jpg",
+            albumname: "Paranoid",
+            release: "18/09/1970",
+            genre:"Heavy Metal",
+            stars: "5",
+            comment: "Incrível!!! Um dos melhores álbuns de rock de todos os tempos"
+        }
+    );
+    
 
     const [rating, setRating]= useState({
         star: 0,
-        rate: "Fenomenal!!! Um dos melhores álbuns de todos os tempos"
+        // rate: avaliar.comment
     })
 
     function setStar(pstar){
@@ -52,23 +57,29 @@ function Avaliacao() {
             <br/>
             <br/>  
 
-            <h2 className="text-center text-slate-100">Avalie a sua música / o seu álbum</h2>
-            <div className=" flex justify-center">
+            <div className="flex justify-center">
                 <div className="text-center">
-                    <img src="https://m.media-amazon.com/images/I/712nD2NH-zL._AC_SY355_.jpg"/> 
+                    <div className="box-border rounded-3xl bg-purple-800 mx-4 my-4">
+                        <h2 className=" text-center text-slate-100">Avalie a sua música / o seu álbum</h2>
+                        <img src={avaliar.image}/> 
+                        <br/>
+                        <br/>
+                        <p className="text-slate-100">Álbum: {avaliar.albumname} </p>
+                        <p className="text-slate-100">Lançamento: {avaliar.release} </p>
+                        <p className="text-slate-100">Gênero: {avaliar.genre} </p>
+
+                        <div>
+                            <button onClick={()=>setStar(1)}>⭐</button>
+                            <button onClick={()=>setStar(2)}>⭐</button>
+                            <button onClick={()=>setStar(3)}>⭐</button>
+                            <button onClick={()=>setStar(4)}>⭐</button>
+                            <button onClick={()=>setStar(5)}>⭐</button>
+                            <p className="text-slate-100">{avaliar.stars}</p>
+                        </div>
+                    </div>
                     <br/>
                     <br/>
-                    <p className="text-slate-100">Álbum: Paranoid (18/09/1970)</p>
-                    <br/>
-                    <br/>
-                    <div>
-                        <button onClick={()=>setStar(1)}>⭐</button>
-                        <button onClick={()=>setStar(2)}>⭐</button>
-                        <button onClick={()=>setStar(3)}>⭐</button>
-                        <button onClick={()=>setStar(4)}>⭐</button>
-                        <button onClick={()=>setStar(5)}>⭐</button>
-                        <p className="text-slate-100">{rating.star}</p>
-                    </div>     
+                         
                 </div>
             </div>
                     
@@ -84,7 +95,7 @@ function Avaliacao() {
                 </div>
 
                 <div className="flex justify-center">
-                    <textarea id="story" name="story" rows="10" cols="50"></textarea>
+                    <textarea id="story" name="story" rows="10" cols="50">{avaliar.comment}</textarea>
                 </div>    
             </div>
 

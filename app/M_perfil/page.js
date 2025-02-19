@@ -3,21 +3,22 @@
 import { useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
-function Perfil() {
+function Perfil(attr) {
 
     const [name] = useState("Matheus")
-    const [nickname] = useState("Theuz123");
+    const [nickname] = useState("Theuzin_123");
     const [followers] = useState("25");
     const [follow] = useState("30");
 
-    const user = {
-        id: 0,
-        pname: "Matheus",
-        pnickname: "Theuz123",
-        pfollowers: "25",
-        pfollow: "30"
-    }
-
+    const [users, setUsers] = useState(
+        {
+            id: 0,
+            pname: "Matheus",
+            pnickname: "Theuzin_123",
+            pfollowers: "25",
+            pfollow: "30"
+        });
+    
     
 //  const [variável] = useState({}); ==> Quando tem que por um objeto anônimo, se coloca uma chave ({}) vazia para atribuir um valor.
 
