@@ -18,7 +18,7 @@ function Suporte() {
 
             <div>
 
-             <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+<div className="min-h-screen flex items-center justify-center p-6">
              <div className="max-w-3xl w-full bg-[#080808] text-slate-100 rounded-2xl shadow-lg p-6">
                 <h1 className="text-3xl font-bold text-slate-100 mb-4">Suporte</h1>
                 <p className="text-slate-100 mb-6">Estamos aqui para ajudar. Entre em contato conosco para qualquer dúvida ou problema.</p>

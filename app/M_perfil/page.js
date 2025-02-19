@@ -6,9 +6,17 @@ import Cabecalho from "../components/Cabecalho";
 function Perfil() {
 
     const [name] = useState("Matheus")
-    const [nickname] = useState("Theu123");
+    const [nickname] = useState("Theuz123");
     const [followers] = useState("25");
     const [follow] = useState("30");
+
+    const user = {
+        id: 0,
+        pname: "Matheus",
+        pnickname: "Theuz123",
+        pfollowers: "25",
+        pfollow: "30"
+    }
 
     
 //  const [variável] = useState({}); ==> Quando tem que por um objeto anônimo, se coloca uma chave ({}) vazia para atribuir um valor.
@@ -18,23 +26,23 @@ function Perfil() {
         <div>
             <hr/>
             <br/>
-            <h2>Perfil</h2>
+            <h2 className="text-slate-100">Perfil</h2>
             <div className="flex">
                 <br/>
                 <img src="https://placehold.co/150" />
                 <div>
                     <div className="ml-24 text-center">
                         {/* Quando se cria um variável dentro do objeto se referencia à eles como: objeto.variável */}
-                        <p>Nome: {name} </p>
+                        <p className="text-slate-100">Nome: {name} </p>
                         <br/>
                         <br/>
-                        <p>Nickname: {nickname} </p>
+                        <p className="text-slate-100">Nickname: {nickname} </p>
                         <br/>
                         <br/>
-                        <p>Seguidores: {followers} </p>
+                        <p className="text-slate-100">Seguidores: {followers} </p>
                         <br/>
                         <br/>
-                        <p>Seguindo: {follow} </p>
+                        <p className="text-slate-100">Seguindo: {follow} </p>
                     </div>
                 </div>   
             </div>
@@ -42,17 +50,17 @@ function Perfil() {
             <br/>
             <br/>
             <br/>
-            <h2>Playlists criadas</h2>
+            <h2 className="text-slate-100">Playlists criadas</h2>
             
             <br/>
             <br/>
             <br/>
-            <div className="flex justify-around">
+            <div className="flex justify-around text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
-                    <div className="">
-                        <p className="">Playlist 1</p>
+                    <div className="ml-8">
+                        <p className="mr-6">Playlist 1</p>
                         <br/>
                         <br/>
                     </div>
@@ -104,7 +112,7 @@ function Perfil() {
                 <br/>
                 <br/>
                 <br/>
-                <h2>Conquistas</h2>
+                <h2 className="text-slate-100">Conquistas</h2>
             </div>
 
             <br/>
@@ -112,13 +120,13 @@ function Perfil() {
                 <br/>
                 <br/>
                 
-            <div className="justify-between flex">
+            <div className="justify-between flex text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
                     <div className="ml-8">
                         <p className="mr-6">Viciado em Recomendações </p>
-                        <p className="mr-6">Recomendou músicas para 20 amigos</p>
+                        <p className="mr-6">Recomendou músicas para mais de 20 amigos</p>
                         <br/>
                         <br/>
                     </div>
@@ -143,7 +151,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Alquimista da Música</p>
-                            <p className="mr-6">Você mistura e experimenta recomendações de diferentes gêneros</p>
+                            <p className="mr-6">Você mistura e experimenta recomendações de vários gêneros</p>
                             <br/>
                             <br/>
                         </div>
@@ -155,7 +163,7 @@ function Perfil() {
             <br/>
             <br/>
 
-            <div className="justify-around flex">
+            <div className="justify-around flex text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -173,7 +181,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Curador de títulos</p>
-                            <p className="mr-6">Recomendou 5 álbuns completos para os seus amigos</p>
+                            <p className="mr-6">Recomendou 5 álbuns para os seus amigos</p>
                             <br/>
                             <br/>
                         </div>
@@ -198,7 +206,7 @@ function Perfil() {
             <br/>
             <br/>
 
-            <div className="justify-around flex">
+            <div className="justify-around flex text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -216,7 +224,7 @@ function Perfil() {
                     <div>
                         <div className="ml-8">
                             <p className="mr-6">Mestre dos Sons</p>
-                            <p className="mr-6">Você criou sua primeira playlist</p>
+                            <p className="mr-6">Você criou sua primeira playlist de músicas</p>
                             <br/>
                             <br/>
                         </div>
@@ -228,8 +236,8 @@ function Perfil() {
                     <img src="https://placehold.co/100"/>
                     <div>
                         <div className="ml-8">
-                            <p className="mr-6">Rei da Curadoria</p>
-                            <p className="mr-6">Recomendou músicas para 20 amigos</p>
+                            <p className="mr-6">Explorador de Estilos</p>
+                            <p className="mr-6">Explorou músicas de diferentes décadas e estilos musicais.</p>
                             <br/>
                             <br/>
                         </div>
@@ -241,7 +249,7 @@ function Perfil() {
             <br/>
             <br/>
 
-            <div className="justify-around flex">
+            <div className="justify-around flex text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -284,7 +292,7 @@ function Perfil() {
             <br/>
             <br/>
 
-            <div className="justify-around flex">
+            <div className="justify-around flex text-slate-100">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
