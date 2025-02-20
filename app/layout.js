@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Cabecalho from "./components/Cabecalho";
+import Rodape from "./components/Rodape";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +25,14 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Cabecalho/>
-        {children}
+
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow">
+            {children}
+          </main>
+         <Rodape />
+        </div>
+        
       </body>
     </html>
   );
