@@ -1,36 +1,36 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
 function Perfil() {
 
-    const [name] = useState("Matheus")
-    const [nickname] = useState("Theuzin_123");
-    const [followers] = useState("25");
-    const [follow] = useState("30");
+    const [name, setName] = useState("Matheus")
+    const [nickname, setNickname] = useState("Theuzin_123");
+    const [followers, setFollowers] = useState("25");
+    const [follow, setFollow] = useState("30");
+    const [user, setUser] = useState();
+
+    useEffect(()=> {
+        const data = JSON.parse (localStorage.getItem("usuario"));
+        setUser(data);
+    }, [])
 
     return ( 
         <div>
             <div>
                 <div className="mt-12">
                     <h2 className="text-center text-slate-100 mb-10">Perfil</h2>
-                    <div className="flex justify-center mb-20">
+                    <div className="flex justify-center ">
                         <img src="https://placehold.co/150"/>
-                    </div>
-
-                    <div>
-                        <div className="text-center">
-                            {/* Usando o objeto users */}
-                            <p className="text-slate-100">Nome: <strong>{name}</strong></p>
+                        <p className="text-slate-100">Nome: <strong>{name}</strong></p>
                             <br />
                             <p className="text-slate-100">Nickname: <strong>{nickname}</strong></p>
                             <br />
                             <p className="text-slate-100">Seguidores: <strong>{followers}</strong></p>
                             <br />
                             <p className="text-slate-100">Seguindo: <strong>{follow}</strong></p>
-                        </div>
-                    </div>   
+                    </div>  
                 </div>
 
                 <br />
