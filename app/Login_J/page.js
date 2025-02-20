@@ -25,17 +25,19 @@ function Login() {
         { id: 14, email: "eduardo.martins@email.com", senha: "eduM@r", nick: "Dudu" }
 ]);
 
-    {
-        usuarios.map((u)=>{
-        
-        if(u.email == email && u.senha == senha){
-            console.log(" Logado");
-        }}
-    )};
+    
 
     function salvar(){
-        console.log("E-mail logado:"+email);
-        console.log("Senha logada:"+senha);
+        {
+            usuarios.map((u)=>{
+            
+            if(u.email == email && u.senha == senha){
+                console.log(" Logado");
+                u.senha = "";
+                localStorage.setItem("usuario", JSON.stringify(u)); //Transforma objeto em texto pra ser guardado no storage local do navegador
+            }}
+        
+        )};
     }
 
     return ( 
