@@ -1,10 +1,35 @@
 'use client'
+import Artistas from "./artista_N/components/Artistas";
 import "./components/Musica.css"
 import Musica from "./components/Musicas";
 import Noticias from "./components/Noticias";
 import { useState } from "react";
 
 export default function Home() {
+
+
+    const [artistas, alteraArtistas]=useState([
+
+      {
+              
+        imagemArtista: "imagens/albuns sabbath/ bad.jpg"
+      },
+      {
+          
+        imagemArtista: ""
+      },
+      {
+       
+        imagemArtista: ""
+      },
+      {
+       
+        imagemArtista: ""
+      }
+      
+
+    ]);
+
 
     const [musicas, alteraMusicas] = useState([
         {
@@ -20,67 +45,67 @@ export default function Home() {
           {
             nomeMusica: "Billie Jean",
             artista: "Michael Jackson",
-            imagem: "https://via.placeholder.com/225x225/00FF00/000000?text=Billie+Jean"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Smooth Criminal",
             artista: "Michael Jackson",
-            imagem: "https://via.placeholder.com/225x225/FFFF00/000000?text=Smooth+Criminal"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Beat It",
             artista: "Michael Jackson",
-            imagem: "https://via.placeholder.com/225x225/00FFFF/000000?text=Beat+It"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Like a Prayer",
             artista: "Madonna",
-            imagem: "https://via.placeholder.com/225x225/FF00FF/FFFFFF?text=Like+a+Prayer"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Vogue",
             artista: "Madonna",
-            imagem: "https://via.placeholder.com/225x225/800080/FFFFFF?text=Vogue"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Material Girl",
             artista: "Madonna",
-            imagem: "https://via.placeholder.com/225x225/FFA500/FFFFFF?text=Material+Girl"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Papa Don't Preach",
             artista: "Madonna",
-            imagem: "https://via.placeholder.com/225x225/A0522D/FFFFFF?text=Papa+Dont+Preach"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "La Isla Bonita",
             artista: "Madonna",
-            imagem: "https://via.placeholder.com/225x225/008000/FFFFFF?text=La+Isla+Bonita"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Bohemian Rhapsody",
             artista: "Queen",
-            imagem: "https://via.placeholder.com/225x225/40E0D0/000000?text=Bohemian+Rhapsody"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "We Will Rock You",
             artista: "Queen",
-            imagem: "https://via.placeholder.com/225x225/FFD700/000000?text=We+Will+Rock+You"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "We Are the Champions",
             artista: "Queen",
-            imagem: "https://via.placeholder.com/225x225/FF69B4/FFFFFF?text=We+Are+the+Champions"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Another One Bites the Dust",
             artista: "Queen",
-            imagem: "https://via.placeholder.com/225x225/808080/FFFFFF?text=Another+One+Bites+the+Dust"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           },
           {
             nomeMusica: "Don't Stop Me Now",
             artista: "Queen",
-            imagem: "https://via.placeholder.com/225x225/90EE90/000000?text=Dont+Stop+Me+Now"
+            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           }
     ]);
 
@@ -106,12 +131,29 @@ export default function Home() {
 
         </div>
 
+                <h1 className="text-white text-center ">Artistas</h1>
+                <div>
+                  <ul  className="musica ">{
+                 artistas.map((i)=>
+                
+                  <Artistas imagemArtista={i.imagemArtista}/>
+              
+              )
+               }</ul>
+                </div>
+    <br/>
+    <br/>
     <br/>
     <hr/>
+    <h1 className="text-white text-center">Noticias quea soam como musicas</h1>
+         <div className="text-white">
+            <Noticias/>
+         </div>
 
-    <div className="text-white">
-        <Noticias/>
-    </div>
+    <br/>
+    <hr/>
+    <br/>
+
 
     </div>
     );

@@ -5,7 +5,7 @@ function Noticias(attr) {
     return (  
         <div >
             
-<h1 >Noticias quea soam como musicas</h1>
+
 
 <h2><li>APX 7 podcast voltado para o lado mais rock da coisa</li></h2>
 
