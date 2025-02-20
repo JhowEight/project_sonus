@@ -3,55 +3,48 @@
 import { useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
-function Perfil(attr) {
+function Perfil() {
 
     const [name] = useState("Matheus")
     const [nickname] = useState("Theuzin_123");
     const [followers] = useState("25");
     const [follow] = useState("30");
 
-    const [users, setUsers] = useState(
-        {
-            id: 0,
-            pname: "Matheus",
-            pnickname: "Theuzin_123",
-            pfollowers: "25",
-            pfollow: "30"
-        });
-    
-    
-//  const [variável] = useState({}); ==> Quando tem que por um objeto anônimo, se coloca uma chave ({}) vazia para atribuir um valor.
-
     return ( 
-
         <div>
-            <hr/>
-            <br/>
-            <h2 className="text-slate-100">Perfil</h2>
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/150" />
-                <div>
-                    <div className="ml-24 text-center">
-                        {/* Quando se cria um variável dentro do objeto se referencia à eles como: objeto.variável */}
-                        <p className="text-slate-100">Nome: {name} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Nickname: {nickname} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Seguidores: {followers} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Seguindo: {follow} </p>
+            <div>
+                <div className="mt-12">
+                    <h2 className="text-center text-slate-100 mb-10">Perfil</h2>
+                    <div className="flex justify-center mb-20">
+                        <img src="https://placehold.co/150"/>
                     </div>
-                </div>   
-            </div>
 
-            <br/>
-            <br/>
-            <br/>
-            <h2 className="text-slate-100">Playlists criadas</h2>
+                    <div>
+                        <div className="text-center">
+                            {/* Usando o objeto users */}
+                            <p className="text-slate-100">Nome: <strong>{name}</strong></p>
+                            <br />
+                            <p className="text-slate-100">Nickname: <strong>{nickname}</strong></p>
+                            <br />
+                            <p className="text-slate-100">Seguidores: <strong>{followers}</strong></p>
+                            <br />
+                            <p className="text-slate-100">Seguindo: <strong>{follow}</strong></p>
+                        </div>
+                    </div>   
+                </div>
+
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    );
+}
+
+export default Perfil;
+
+
+{/* <h2 className="text-slate-100">Playlists criadas</h2>
             
             <br/>
             <br/>
@@ -334,7 +327,7 @@ function Perfil(attr) {
 
             <br/>
             <br/>
-            <br/>
+            <br/> */}
 
             {/* <div className="justify-around flex">
                 <br/>
@@ -378,10 +371,3 @@ function Perfil(attr) {
             Para as div's uma do lado da outra
             */}
 
-            <br/>
-            <br/>
-        </div>
-     );
-}
-
-export default Perfil;
