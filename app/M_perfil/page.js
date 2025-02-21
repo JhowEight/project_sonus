@@ -17,32 +17,20 @@ function Perfil() {
     }, [])
 
     return ( 
-        <div>
-            <div>
-                <div className="mt-12">
-                    <h2 className="text-center text-slate-100 mb-10">Perfil</h2>
-                    <div className="flex justify-center ">
-                        <img src="https://placehold.co/150"/>
-                        <p className="text-slate-100">Nome: <strong>{name}</strong></p>
-                            <br />
-                            <p className="text-slate-100">Nickname: <strong>{nickname}</strong></p>
-                            <br />
-                            <p className="text-slate-100">Seguidores: <strong>{followers}</strong></p>
-                            <br />
-                            <p className="text-slate-100">Seguindo: <strong>{follow}</strong></p>
-                    </div>  
-                </div>
-
-                <br />
-                <br />
-                <br />
+        <div className="flex flex-col justify-center items-center mt-20">
+            <div className="box-border rounded-3xl bg-[#362D58] border-solid border-black py-8 px-4">
+                <h2 className="text-center my-6 text-slate-100">Perfil</h2>
+                <img src="https://placehold.co/150" className="px-16"/>
+                <p className="text-slate-100 text-center mt-10 px-10 py-2">Nickname: <strong>{nickname}</strong></p>
+                <p className="text-slate-100 text-center px-10 py-2">Seguidores: <strong>{followers}</strong></p>
+                <p className="text-slate-100 text-center px-10 py-2">Seguindo: <strong>{follow}</strong></p>
             </div>
         </div>
+            
     );
 }
 
 export default Perfil;
-
 
 {/* <h2 className="text-slate-100">Playlists criadas</h2>
             
@@ -327,9 +315,9 @@ export default Perfil;
 
             <br/>
             <br/>
-            <br/> */}
+            <br/>
 
-            {/* <div className="justify-around flex">
+            <div className="justify-around flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -370,4 +358,3 @@ export default Perfil;
             
             Para as div's uma do lado da outra
             */}
-
