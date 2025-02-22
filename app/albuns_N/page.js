@@ -23,7 +23,7 @@ function Album () {
             <h1 className="text-white"> Heaven and Hell </h1>
             <div className="bg-[#362D58] w-120 rounde-xl w-full flex text-white p-5 ">
 
-                <img className="rounded-xl w-96" src="imagens/albuns sabbath/heaven and hell.jpg"/>
+                <img className=" rounded-xl w-96" src="imagens/albuns sabbath/heaven and hell.jpg"/>
 
                 <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
 
@@ -32,49 +32,53 @@ function Album () {
                 </div>
             </div>
 
-            <div className="text-white">
+            <div className=" text-white">
 
                 {
-                    <ul>
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <ul> 
+                      
+                       
+
+                      <button className="cursor-pointer mr-1 rounded-lg   text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Neon Knights <strong> 3:51 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Children of the Sea <strong> 5:34 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Lady Evil <strong> 4:26 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Heaven and Hell <strong> 6:59 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Wishing Well <strong> 4:07 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Die Young <strong> 4:41 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Walk Away <strong> 4:26 </strong> </b>
                     </button>
                   
-                    <button className="mr-1 rounded-lg w-full text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao play.png"></img> 
+                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
                       <b> Lonely Is the Word <strong> 5:53 </strong> </b>
                     </button>
+
                   </ul>
                 }
 
