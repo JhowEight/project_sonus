@@ -17,4 +17,4 @@ function Musicas ( attr ) {
      );
 }
 
-export default Albuns ;
+export default Musicas ;
