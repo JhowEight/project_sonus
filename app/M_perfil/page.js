@@ -1,57 +1,38 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cabecalho from "../components/Cabecalho";
 
-function Perfil(attr) {
+function Perfil() {
 
-    const [name] = useState("Matheus")
-    const [nickname] = useState("Theuzin_123");
-    const [followers] = useState("25");
-    const [follow] = useState("30");
+    const [name, setName] = useState("Matheus")
+    const [nickname, setNickname] = useState("Theuzin_123");
+    const [followers, setFollowers] = useState("25");
+    const [follow, setFollow] = useState("30");
+    const [user, setUser] = useState();
 
-    const [users, setUsers] = useState(
-        {
-            id: 0,
-            pname: "Matheus",
-            pnickname: "Theuzin_123",
-            pfollowers: "25",
-            pfollow: "30"
-        });
-    
-    
-//  const [variável] = useState({}); ==> Quando tem que por um objeto anônimo, se coloca uma chave ({}) vazia para atribuir um valor.
+    useEffect(()=> {
+        const data = JSON.parse (localStorage.getItem("usuario"));
+        setUser(data);
+    }, [])
 
     return ( 
-
-        <div>
-            <hr/>
-            <br/>
-            <h2 className="text-slate-100">Perfil</h2>
-            <div className="flex">
-                <br/>
-                <img src="https://placehold.co/150" />
-                <div>
-                    <div className="ml-24 text-center">
-                        {/* Quando se cria um variável dentro do objeto se referencia à eles como: objeto.variável */}
-                        <p className="text-slate-100">Nome: {name} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Nickname: {nickname} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Seguidores: {followers} </p>
-                        <br/>
-                        <br/>
-                        <p className="text-slate-100">Seguindo: {follow} </p>
-                    </div>
-                </div>   
+        <div className="flex flex-col justify-center items-center mt-20">
+            <div className="box-border rounded-3xl bg-[#362D58] border-solid border-black py-8 px-4">
+                <h2 className="text-center my-6 text-slate-100">Perfil</h2>
+                <img src="https://placehold.co/150" className="px-16"/>
+                <p className="text-slate-100 text-center mt-10 px-10 py-2">Nickname: <strong>{nickname}</strong></p>
+                <p className="text-slate-100 text-center px-10 py-2">Seguidores: <strong>{followers}</strong></p>
+                <p className="text-slate-100 text-center px-10 py-2">Seguindo: <strong>{follow}</strong></p>
             </div>
+        </div>
+            
+    );
+}
 
-            <br/>
-            <br/>
-            <br/>
-            <h2 className="text-slate-100">Playlists criadas</h2>
+export default Perfil;
+
+{/* <h2 className="text-slate-100">Playlists criadas</h2>
             
             <br/>
             <br/>
@@ -336,7 +317,7 @@ function Perfil(attr) {
             <br/>
             <br/>
 
-            {/* <div className="justify-around flex">
+            <div className="justify-around flex">
                 <br/>
                 <img src="https://placehold.co/100"/>
                 <div>
@@ -377,11 +358,3 @@ function Perfil(attr) {
             
             Para as div's uma do lado da outra
             */}
-
-            <br/>
-            <br/>
-        </div>
-     );
-}
-
-export default Perfil;

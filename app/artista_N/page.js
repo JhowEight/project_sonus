@@ -7,6 +7,17 @@ import Artistas from "./components/Artistas";
 
 
 function Artista () {
+
+    const[artista, alteraArtista] = useState(
+
+        { 
+        id: 0, 
+        nome: "Black Sabbath", 
+        bio: "O Black Sabbath é uma banda britânica formada em 1968 em Birmingham, Inglaterra, considerada a criadora do heavy metal. Com uma sonoridade sombria e riffs pesados, eles revolucionaram o rock e influenciaram gerações de banda.", 
+        imagem: "black sabbath banda.jpg"
+         }
+
+    );
     
     const [albuns, alteraAlbuns] = useState([
         { id: 0, nome: "Black Sabbath", ano: 1970, imagem: "black sabbath.jpg" },
@@ -35,7 +46,13 @@ function Artista () {
             <br/>
             <h1 className=" text-white "> Artista</h1>
 
-            <div>
+            <div className="bg-[#362D58] w-120 flex text-white p-5 ">
+                <img className="rounded-xl w-96" src="imagens/black sabbath banda.jpg/"/>
+
+                <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
+                    <p className="text-5xl text-justify">{artista.nome}</p>
+                    <p className="text-4xl text-justify"> {artista.bio} </p>
+                </div>
 
             </div>
 
