@@ -1,4 +1,5 @@
 'use client'
+import Musicas from "./albuns_N/components/Albuns";
 import Artistas from "./artista_N/components/Artistas";
 import "./components/Musica.css"
 import Musica from "./components/Musicas";
@@ -8,27 +9,28 @@ import { useState } from "react";
 export default function Home() {
 
 
-    const [artistas, alteraArtistas]=useState([
+    // const [artistas, alteraArtistas]=useState([
 
-      {
+    //   {
               
-        imagemArtista: "imagens/albuns sabbath/ bad.jpg"
-      },
-      {
+    //     imagemArtista: "imagens/albuns sabbath/"
+    //   },
+    //   {
           
-        imagemArtista: ""
-      },
-      {
+    //     imagemArtista: ""
+    //   },
+    //   {
        
-        imagemArtista: ""
-      },
-      {
+    //     imagemArtista: ""
+    //   },
+    //   {
        
-        imagemArtista: ""
-      }
+    //     imagemArtista: ""
+    //   }
+      
       
 
-    ]);
+    // ]);
 
 
     const [musicas, alteraMusicas] = useState([
@@ -129,24 +131,25 @@ export default function Home() {
                     
                 }</ul>
 
-        </div>
+               </div>
 
                 <h1 className="text-white text-center ">Artistas</h1>
+
+
+
+
                 <div>
-                  <ul  className="musica ">{
-                 artistas.map((i)=>
-                
-                  <Artistas imagemArtista={i.imagemArtista}/>
-              
-              )
-               }</ul>
+
+                    
                 </div>
     <br/>
     <br/>
     <br/>
     <hr/>
     <h1 className="text-white text-center">Noticias quea soam como musicas</h1>
+
          <div className="text-white">
+
             <Noticias/>
          </div>
 
