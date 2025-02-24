@@ -17,10 +17,10 @@ function Perfil() {
     }, [])
 
     return ( 
-        <div className="flex flex-col justify-center items-center mt-20">
-            <div className="box-border rounded-3xl bg-[#362D58] border-solid border-black py-8 px-4">
-                <h2 className="text-center my-6 text-slate-100">Perfil</h2>
-                <img src="https://placehold.co/150" className="px-16"/>
+        <div className="flex flex-col justify-center items-center mt-14">
+            <div className="box-border rounded-3xl bg-[#362D58] border-solid border-black py-8 px-6">
+                <h2 className="text-center my-8 ml-2  text-slate-100">Perfil</h2>
+                <img src="https://placehold.co/200" className="ml-8 mr-2 border-solid border-black rounded-full"/>
                 <p className="text-slate-100 text-center mt-10 px-10 py-2">Nickname: <strong>{nickname}</strong></p>
                 <p className="text-slate-100 text-center px-10 py-2">Seguidores: <strong>{followers}</strong></p>
                 <p className="text-slate-100 text-center px-10 py-2">Seguindo: <strong>{follow}</strong></p>
@@ -357,4 +357,4 @@ export default Perfil;
             </div>
             
             Para as div's uma do lado da outra
-            */}
+*/}
