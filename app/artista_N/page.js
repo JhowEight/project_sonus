@@ -46,7 +46,7 @@ function Artista () {
             <br/>
             <h1 className=" text-white "> Artista</h1>
 
-            <div className="bg-[#362D58] w-120 flex text-white p-5 ">
+            <div className="bg-[#362D58] w-[1500px] flex text-white p-5 ">
                 <img className="rounded-xl w-96" src="imagens/black sabbath banda.jpg/"/>
 
                 <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
@@ -59,7 +59,7 @@ function Artista () {
             <br/>
             <h2 className=" text-white ">Albúns</h2>
 
-            <div className="flex bg-stone-950">         
+            <div className="flex bg-stone-950 overflow-x-auto w-full">         
 
                 {
                     albuns.map( (i)=>
