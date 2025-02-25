@@ -130,7 +130,107 @@ function Avaliacao(attr) {
             }
         })
     })
+
+    const [user,setUser] = useState();
+    const [adm,setAdm] = useState();
+
+    function setP(tela){
+        if (tela = "user"){
+            setUser(true);
+            setAdm(false);
+        }
+        else{
+            setUser(false);
+            setAdm(true);
+        }
+    }
+
+    // function setDisplay(tela){
+    //     if(tela == "cadastro"){
+    //         setRegister(true);
+    //         setListing(false);
+    //     }
+    //     if (tela == "listagem"){
+    //         setRegister(false);
+    //         setListing(true);
+    //     }
+    // }
+    // <button onClick={()=>setDisplay("listagem")} className="">Listagem</button>
+
+
+    // {
+    //     register == true &&  
+    //     <div className="border-black rounded-xl p-10 border-4">
+    //         <h2 className="font-bold mb-4">Cadastro de produto</h2>
+    //         {/* O onSubmit só é usado no form */}
+    //         <form onSubmit={(e)=>save(e)}>
+    //             <label>
+    //                 Digite o nome:
+    //                 <br/>
+    //                 <input onChange={(e)=>setName(e.target.value)}className="outline"/>
+    //             </label>
+    //             <br/>
+    //             <br/>
+    //             <label>
+    //                 Digite o preço:
+    //                 <br/>
+    //                 <input onChange={(e)=>setPrice(e.target.value)} className="outline"/>
+    //             </label>
+    //             <br/>
+    //             <br/>
+    //             <label>
+    //                 Digite a quantidade:
+    //                 <br/>
+    //                 <input onChange={(e)=>setQuantity(e.target.value)}className="outline"/>
+    //             </label>
+    //             <br/>
+    //             <br/>
+    //             <button className="rounded-2xl bg-gray-400 p-4 my-6">Salvar</button>
+    //         </form>
+    //     </div>
+    //     }
+    // </div>
+
+    // {    
+    // const [search, setSearch] = useState("");
+    // const [pokemons, setPokemons] = useState([]);
+    // const [errorsearch, setErrorSearch] = useState(false);
+    // async function find() {
+    //   try{
+    //       const response = await axios.get("https://pokeapi.co/api/v2/pokemon/"+search);
+    //       const data = response.data;
+    //       console.log(data);
+    //       setPokemons([data]);
+    //       setErrorSearch(false);
+    //     }
+    //     catch(e){
+    //       setErrorSearch(true);
+    //     }
+    // }
+    // async function findAll(){
+    //   const response = await axios.get("https://pokeapi.co/api/v2/pokemon/")
+    //   const data = response.data.results;
+    //   setPokemons(data)
+    // }
+    // useEffect(()=>{
+    //   findAll();
+    // }, [])
+    // // useEffect(()=> {}, []) = chama o que você colocar em {}, e monitora o que estiver em []. Se não tem nada, chama {}.
     
+    //     pokemons == 0 ?
+    //     <p>Carregando...</p>
+    //     :
+    //     pokemons.map( (i, index) =>
+    //       <div className="box-">
+    //         <h2> {i.name} </h2>
+    //         <p> <strong>ID: {i.id ? i.id : index+1}</strong> </p>
+    //         <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/"+(i.id ? i.id : index+1)+".gif"}/>
+    //       </div>
+    //     )
+    //   }
+
+
+
     const [rating, setRating] = useState({
         star: 0,
         // rate: avaliar.comment
@@ -161,9 +261,9 @@ function Avaliacao(attr) {
     }
     
     return ( 
-        <div className="my-24">
+        <div className="my-20">
             <div className="flex justify-center text-center">
-                <div>
+                <div className="mx-32">
                     <div className="box-border rounded-3xl p-8 bg-[#362D58] border-[3px] border-solid border-black mb-10">
                         <h2 className="text-slate-100 mb-8">Avalie a sua música / o seu álbum</h2>
                         <img className="rounded-3xl mb-4 border-solid border-black" src={avaliar.image} />
@@ -173,44 +273,56 @@ function Avaliacao(attr) {
                         <p className="text-slate-100">Gênero: {album.genre}</p>
                     </div>
 
-                    <div className="box-border rounded-3xl p-4 bg-[#362D58] border-[3px] border-solid border-black my-6">
-                        <h3 className="text-center text-slate-100 mb-2 mt-2">Avaliação dos usuários</h3>
-                        {/* Avaliação do usuário */}
-                        <button onClick={() => setStar(1)} className="bg-[#362D58]">⭐</button>
-                        <button onClick={() => setStar(2)} className="bg-[#362D58]">⭐</button>
-                        <button onClick={() => setStar(3)} className="bg-[#362D58]">⭐</button>
-                        <button onClick={() => setStar(4)} className="bg-[#362D58]">⭐</button>
-                        <button onClick={() => setStar(5)} className="bg-[#362D58]">⭐</button>
-                        <p className="text-slate-100 mt-2 mb-2">{avaliar.stars}</p>
-
-                        <div className="flex flex-col justify-center items-center">
-                            <p className="text-slate-100">O que você achou da recomendação da música / do álbum?</p>
-                            <textarea id="story" name="story" rows="10" cols="54">{avaliar.comment}</textarea>
-                            <button input onChange={(a)=> setRating(a.target.value)} value={rating.rate} onClick={()=> Rating()} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6">Enviar avaliação</button>    
-                        </div>
-
+                    <div>
+                        <button onClick={()=>setP("user")} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6 mb-4 mx-40">Você é usuário?</button>
+                        <button onClick={()=>setP("adm")} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6 mb-4 mx-40">Você é administrador?</button>
                     </div>
+
+                    {
+                        user == false&&
+
+                        <div className="box-border rounded-3xl p-4 bg-[#362D58] border-[3px] border-solid border-black my-6">
+                            <h3 className="text-center text-slate-100 mb-2 mt-2">Avaliação dos usuários</h3>
+                            {/* Avaliação do usuário */}
+                            <button onClick={() => setStar(1)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(2)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(3)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(4)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(5)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <p className="text-slate-100 mt-2 mb-2">{avaliar.stars}</p>
+
+                            <div className="flex flex-col justify-center items-center">
+                                <p className="text-slate-100">O que você achou da recomendação da música / do álbum?</p>
+                                <textarea id="story" name="story" rows="10" cols="54" className="border-solid border-black">{avaliar.comment}</textarea>
+                                <button input onChange={(a)=> setRating(a.target.value)} value={rating.rate} onClick={()=> Rating()} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6">Enviar avaliação</button>    
+                            </div>
+
+                        </div>
+                    }
                 </div>
             </div>
                     
-            <div className="flex justify-center mt-4">
-                <div className="flex flex-col justify-center box-border rounded-3xl bg-[#362D58] border-[3px] border-solid border-black px-8">
-                    <h3 className="text-center text-slate-100 mb-2">Avaliação dos administradores</h3>
-                    <div className="flex justify-center">
-                        {/* Avaliação dos administradores */}
-                        <button onClick={() => setStar(1)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
-                        <button onClick={() => setStar(2)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
-                        <button onClick={() => setStar(3)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
-                        <button onClick={() => setStar(4)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
-                        <button onClick={() => setStar(5)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
-                    </div>
+            {
+                adm == true&&
+                <div className="flex justify-center mt-4">
+                    <div className="flex flex-col justify-center box-border rounded-3xl bg-[#362D58] border-[3px] border-solid border-black px-8">
+                        <h3 className="text-center text-slate-100 mb-2">Avaliação dos administradores</h3>
+                        <div className="flex justify-center">
+                            {/* Avaliação dos administradores */}
+                            <button onClick={() => setStar(1)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(2)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(3)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(4)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                            <button onClick={() => setStar(5)} className="bg-[#362D58] w-9 h-6 my-2">⭐</button>
+                        </div>
 
-                    <p className="text-slate-100 block text-center mb-2">{avaliar.stars}</p>
-                    <p className="text-slate-100">O que você achou da recomendação da música / do álbum?</p>
-                    <textarea id="story" name="story" rows="10" cols="54"></textarea>
-                    <button input onChange={(a)=> setRating(a.target.value)} value={rating.rate} onClick={()=> Rating()} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6 mb-4 mx-40">Enviar avaliação</button>
+                        <p className="text-slate-100 block text-center mb-2">{avaliar.stars}</p>
+                        <p className="text-slate-100">O que você achou da recomendação da música / do álbum?</p>
+                        <textarea id="story" name="story" rows="10" cols="54" className="border-solid border-black"></textarea>
+                        <button input onChange={(a)=> setRating(a.target.value)} value={rating.rate} onClick={()=> Rating()} className="bg-[#362D58] hover:bg-[#17223C] focus:outline-2 active:bg-[#17223C] cursor-pointer rounded-md border-black p-2 text-white mt-6 mb-4 mx-40">Enviar avaliação</button>
+                    </div>
                 </div>
-            </div>
+            }
 
         </div>
     );
