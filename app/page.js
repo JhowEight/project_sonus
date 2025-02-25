@@ -108,7 +108,7 @@ export default function Home() {
 
             <div >
 
-                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto w-full ">{   
+                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto   ">{   
                     musicas.map((i)=>
                 
                     <Musica nomeMusica={i.nomeMusica} artista={i.artista} imagem={i.imagem}/> 
