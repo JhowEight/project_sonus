@@ -6,6 +6,8 @@ import Musica from "./components/Musicas";
 import Noticias from "./components/Noticias";
 import { useState } from "react";
 
+
+
 export default function Home() {
 
 
@@ -116,7 +118,7 @@ export default function Home() {
         <div>
 
 
-            <h1 className="text-white">Seus amigos vão gostar disso!!</h1>
+            <h1 className="text-white text-center">Seus amigos vão gostar disso!!</h1>
 
             <div >
 
@@ -131,16 +133,31 @@ export default function Home() {
                     
                 }</ul>
 
+
+                <br/>                
+                <br/>
+                
+
                </div>
 
-                <h1 className="text-white text-center ">Artistas</h1>
+                <h1 className="text-white text-center ">Albuns para você</h1>
+                <br/>
 
 
 
 
-                <div>
+                <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
 
-                    
+                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
+                  
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+
+                  
+
                 </div>
     <br/>
     <br/>
