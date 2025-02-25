@@ -95,22 +95,8 @@ export default function Home() {
             nomeMusica: "We Will Rock You",
             artista: "Queen",
             imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
-          },
-          {
-            nomeMusica: "We Are the Champions",
-            artista: "Queen",
-            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
-          },
-          {
-            nomeMusica: "Another One Bites the Dust",
-            artista: "Queen",
-            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
-          },
-          {
-            nomeMusica: "Don't Stop Me Now",
-            artista: "Queen",
-            imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           }
+        
     ]);
 
     return ( 
@@ -122,7 +108,7 @@ export default function Home() {
 
             <div >
 
-                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto w-full">{   
+                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto   ">{   
                     musicas.map((i)=>
                 
                     <Musica nomeMusica={i.nomeMusica} artista={i.artista} imagem={i.imagem}/> 
@@ -163,7 +149,7 @@ export default function Home() {
     <br/>
     <br/>
     <hr/>
-    <h1 className="text-white text-center">Noticias quea soam como musicas</h1>
+    <h1 className="text-white text-center">Noticias que soam como musicas</h1>
 
          <div className="text-white">
 

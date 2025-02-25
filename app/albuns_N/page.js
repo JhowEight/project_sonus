@@ -21,7 +21,7 @@ function Album () {
 
         <div>
             <h1 className="text-white"> Heaven and Hell </h1>
-            <div className="bg-[#362D58] w-120 rounde-xl w-full flex text-white p-5 ">
+            <div className="bg-[#362D58] w-[1500px] rounde-xl w-full flex text-white p-5 ">
 
                 <img className=" rounded-xl w-96" src="imagens/albuns sabbath/heaven and hell.jpg"/>
 
@@ -29,55 +29,67 @@ function Album () {
 
                     <p className="text-4xl text-justify">Lançado em 25 de abril de 1980, Heaven and Hell marcou uma nova era para o Black Sabbath, sendo o primeiro álbum com Ronnie James Dio nos vocais, após a saída de Ozzy Osbourne. Com uma abordagem mais melódica e épica, o disco trouxe um novo fôlego para a banda, consolidando-se como um dos maiores clássicos do heavy metal.</p>
                 
-                </div>
+                </div><button className=" ml-2 text-4xl cursor-pointer mr-1 rounded-lg w-64 text-white bg-[#1b2021]" href="./M_avaliacao/[id]/0">Avalie o albúm</button>
             </div>
+
+            <br/>
+
+            
 
             <div className=" text-white">
 
                 {
-                    <ul> 
+                    <ul className="list-none"> 
                       
                        
 
-                      <button className="cursor-pointer mr-1 rounded-lg   text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg   text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Neon Knights <strong> 3:51 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Children of the Sea <strong> 5:34 </strong> </b>
                     </button>
-                  
-                    <button className="cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    </li>
+
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Lady Evil <strong> 4:26 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg  text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Heaven and Hell <strong> 6:59 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Wishing Well <strong> 4:07 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Die Young <strong> 4:41 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Walk Away <strong> 4:26 </strong> </b>
                     </button>
+                    </li>
                   
-                    <button className="cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
-                      <img className="w-8 mr-2" src="imagens/botao de play.png"></img> 
+                    <li><button className="text-2xl cursor-pointer mr-1 rounded-lg text-white bg-[#362D58]">
+                      <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Lonely Is the Word <strong> 5:53 </strong> </b>
                     </button>
+                    </li>
 
                   </ul>
                 }
