@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from "react";
+import axios from 'axios';
+import { useState, useEffect } from "react";
 import Cabecalho from "../components/Cabecalho";
 import Musica from "../components/Musicas";
 
@@ -17,26 +18,37 @@ function Album () {
     { id: 7, nome: "Lonely Is the Word", duracao: "5:53" }
     ])
 
-    return (
+    const [album, alteraAlbum] = useState([])
 
-        <div>
+    async function buscaTodos(){
+      const response = await axios.get("http://localhost:4000/album")
+      console.log(response.data)
+      alteraAlbum(response.data)
+  }
+  
+  useEffect( ()=> {
+      buscaTodos();
+  }, [] )
+
+
+    return (
+{/*
+        < div>
             <h1 className="text-white"> Heaven and Hell </h1>
             <div className="bg-[#362D58] w-[1500px] rounde-xl w-full flex text-white p-5 ">
 
                 <img className=" rounded-xl w-96" src="imagens/albuns sabbath/heaven and hell.jpg"/>
 
                 <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
-
-                    <p className="text-4xl text-justify">Lançado em 25 de abril de 1980, Heaven and Hell marcou uma nova era para o Black Sabbath, sendo o primeiro álbum com Ronnie James Dio nos vocais, após a saída de Ozzy Osbourne. Com uma abordagem mais melódica e épica, o disco trouxe um novo fôlego para a banda, consolidando-se como um dos maiores clássicos do heavy metal.</p>
-                
+                    <p className="text-4xl text-justify">Lançado em 25 de abril de 1980, Heaven and Hell marcou uma nova era para o Black Sabbath, sendo o primeiro álbum com 
+                      Ronnie James Dio nos vocais, após a saída de Ozzy Osbourne. Com uma abordagem mais melódica e épica, o disco trouxe um novo fôlego para a banda, 
+                      consolidando-se como um dos maiores clássicos do heavy metal.</p>
                 </div>
             </div>
 
             <br/>
-            
 
             <div className=" text-white">
-
                 {
                     <ul className="list-none"> 
                     
@@ -91,6 +103,10 @@ function Album () {
                   </ul>
                 }
             </div>
+
+        </div>*/}
+
+        <div>
 
         </div>
 
