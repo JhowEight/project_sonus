@@ -29,20 +29,17 @@ function Album () {
 
                     <p className="text-4xl text-justify">Lançado em 25 de abril de 1980, Heaven and Hell marcou uma nova era para o Black Sabbath, sendo o primeiro álbum com Ronnie James Dio nos vocais, após a saída de Ozzy Osbourne. Com uma abordagem mais melódica e épica, o disco trouxe um novo fôlego para a banda, consolidando-se como um dos maiores clássicos do heavy metal.</p>
                 
-                </div><button className=" ml-2 text-4xl cursor-pointer mr-1 rounded-lg w-64 text-white bg-[#1b2021]" href="./M_avaliacao/[id]/0">Avalie o albúm</button>
+                </div>
             </div>
 
             <br/>
-
             
 
             <div className=" text-white">
 
                 {
                     <ul className="list-none"> 
-                      
-                       
-
+                    
                     <li><button className="text-2xl cursor-pointer mr-1 rounded-lg   text-white bg-[#362D58]">
                       <img className="w-16 mr-2" src="imagens/albuns sabbath/heaven and hell.jpg"></img> 
                       <b> Neon Knights <strong> 3:51 </strong> </b>
@@ -93,12 +90,9 @@ function Album () {
 
                   </ul>
                 }
-
             </div>
 
         </div>
-
-
 
  );
 }
