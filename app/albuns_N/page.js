@@ -20,20 +20,29 @@ function Album () {
 
     const [album, alteraAlbum] = useState([])
 
-    async function buscaTodos(){
-      const response = await axios.get("http://localhost:4000/album")
-      console.log(response.data)
-      alteraAlbum(response.data)
-  }
+  //   async function buscaTodos(){
+  //     const response = await axios.get("http://localhost:4000/album")
+  //     console.log(response.data)
+  //     alteraAlbum(response.data)
+  // }
   
-  useEffect( ()=> {
-      buscaTodos();
-  }, [] )
+  useEffect(() => {
+    async function fetchAlbumData() {
+      try {
+        const response = await axios.get('http://localhost:4000/album');
+        alteraAlbum(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar dados do álbum:', error);
+      }
+    }
+
+    fetchAlbumData();
+  }, []);
 
 
     return (
-{/*
-        < div>
+
+/*        < div>
             <h1 className="text-white"> Heaven and Hell </h1>
             <div className="bg-[#362D58] w-[1500px] rounde-xl w-full flex text-white p-5 ">
 
@@ -104,10 +113,22 @@ function Album () {
                 }
             </div>
 
-        </div>*/}
+        </div>*/
 
         <div>
-
+          <h2 className="text-white p-5">Álbum</h2>
+          <div className="text-white flex flex-wrap justify-start gap-8 p-5">
+            {album.length > 0 ? (
+              album.map((item, index) => (
+                <div key={index} className="border-solid border rounded-xl bg-[#362D58] p-5 w-60">
+                  <h3>{item.nome}</h3>
+                  <p>{item.descricao}</p>
+                </div>
+              ))
+            ) : (
+              <p>Carregando...</p>
+            )}
+          </div>
         </div>
 
  );
