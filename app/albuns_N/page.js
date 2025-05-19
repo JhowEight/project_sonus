@@ -41,7 +41,7 @@ function Album () {
 
     return (
 
-/*      <div>
+      /* <div>
 
           <h1 className="text-white"> Heaven and Hell </h1>
             <div className="bg-[#362D58] w-[1500px] rounde-xl w-full flex text-white p-5 ">
@@ -56,43 +56,44 @@ function Album () {
             <br/>            
 
         </div>*/
-        
-        <div>
-      <h2 className="text-white p-5">Álbum</h2>
 
-      {/* Exibe os álbuns na lista */}
-      <div className="text-white flex flex-wrap justify-start gap-8 p-5">
-        {album.length > 0 ? (
-          album.map((item, index) => (
-            <div
-              key={index}
-              className="border-solid border rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer"
-              onClick={() => handleAlbumClick(item)} // Chama a função ao clicar no álbum
-            >
-              <h3>{item.nome}</h3>
+      <div>
+        <h2 className="text-white p-5 text-2xl font-bold">Álbuns</h2>
+
+            {/* Lista de álbuns */}
+            <div className="text-white flex flex-wrap justify-start gap-8 p-5">
+              {album.length > 0 ? (
+                album.map((item, index) => (
+                  <div
+                    key={index}
+                    className="border border-white/20 rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer hover:bg-[#4e3d7a] transition"
+                    onClick={() => handleAlbumClick(item)}
+                  >
+                    <h3 className="text-lg font-semibold">{item.nome}</h3>
+                  </div>
+                ))
+              ) : (
+                <p>Carregando...</p>
+              )}
             </div>
-          ))
-        ) : (
-          <p>Carregando...</p>
-        )}
+
+          {/* Detalhes do álbum selecionado */}
+          {selecionaAlbum && (
+            <div className="p-5">
+              <h1 className="text-white text-3xl font-bold mb-4">{selecionaAlbum.nome}</h1>
+
+              <div className="bg-[#362D58] max-w-7xl rounded-xl w-full flex flex-col md:flex-row text-white p-5">
+                <img className="rounded-xl w-full md:w-96 object-cover" src={selecionaAlbum.url_imagem} alt={selecionaAlbum.nome}/>
+                <div className="p-4 md:ml-4 mt-4 md:mt-0 rounded-xl bg-[#1b2021] flex-1">
+                  <p className="text-xl text-justify">
+                    {selecionaAlbum.descricao}
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          )}
       </div>
-
-      {/* Detalhes do álbum selecionado */}
-      {selecionaAlbum && (
-        <div>
-          <h1 className="text-white text-center text-4xl mt-5">{selecionaAlbum.nome}</h1>
-          
-          <div className="bg-[#362D58] w-[1500px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
-            <img className="rounded-xl w-96" src={selecionaAlbum.url_imagem} alt={selecionaAlbum.nome}/>
-
-            <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
-              <p className="text-4xl text-justify">{selecionaAlbum.descricao}</p>
-            </div>
-
-          </div>
-        </div>
-      )}
-    </div>
 
  );
 }
