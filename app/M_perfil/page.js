@@ -5,11 +5,7 @@ import Cabecalho from "../components/Cabecalho";
 
 function Perfil() {
 
-    const [name, setName] = useState("Matheus")
-    const [nickname, setNickname] = useState("Theuzin_123");
-    const [followers, setFollowers] = useState("25");
-    const [follow, setFollow] = useState("30");
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({});
 
     useEffect(()=> {
         const data = JSON.parse (localStorage.getItem("usuario"));
@@ -21,9 +17,7 @@ function Perfil() {
             <div className="box-border rounded-3xl bg-[#080808] b py-8 px-6">
                 <h2 className="text-center my-8 ml-2  text-slate-100">Perfil</h2>
                 <img src="https://placehold.co/200" className="ml-8 rounded-full"/>
-                <p className="text-slate-100 text-center mt-10 px-10 py-2">Nickname: <strong>{nickname}</strong></p>
-                <p className="text-slate-100 text-center px-10 py-2">Seguidores: <strong>{followers}</strong></p>
-                <p className="text-slate-100 text-center px-10 py-2">Seguindo: <strong>{follow}</strong></p>
+                <p className="text-slate-100 text-center mt-10 px-10 py-2">Nickname: <strong>{user.nickname}</strong></p>
             </div>
         </div>
             
