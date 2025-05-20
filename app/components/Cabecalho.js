@@ -7,7 +7,7 @@ function Cabecalho() {
 
   useEffect(() => {
     const storedLogin = JSON.parse (localStorage.getItem("usuario"));
-    if (storedLogin.id != undefined) {
+    if (storedLogin?.id != undefined) {
       setIsLoggedIn(true);
     }
   }, []);
