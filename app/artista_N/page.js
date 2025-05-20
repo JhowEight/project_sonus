@@ -36,6 +36,19 @@ function Artista () {
         <div>
       <h2 className="text-white p-5">Artista</h2>
 
+
+      {/* Detalhes do artista selecionado */}
+      {selecionaArtista && (
+        <div>
+          
+          
+          <div className="bg-[#362D58] w-[1500px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
+            <img className="rounded-xl  w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
+            <h1 className="text-white text-center text-4xl mt-5">{selecionaArtista.nome}</h1>
+          </div>
+        </div>
+      )}
+
       {/* Exibe os artistas na lista */}
       <div className="text-white flex flex-wrap justify-start gap-8 p-5">
         {artista.length > 0 ? (
@@ -53,21 +66,7 @@ function Artista () {
         )}
       </div>
 
-      {/* Detalhes do artista selecionado */}
-      {selecionaArtista && (
-        <div>
-          <h1 className="text-white text-center text-4xl mt-5">{selecionaArtista.nome}</h1>
-          
-          <div className="bg-[#362D58] w-[1500px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
-            <img className="rounded-xl w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
-
-            <div className="p-2 w-[1250px] ml-4 rounded-xl bg-[#1b2021]">
-              <p className="text-4xl text-justify">{selecionaArtista.descricao}</p>
-            </div>
-
-          </div>
-        </div>
-      )}
+      
     </div>
 
  );
