@@ -9,7 +9,7 @@ function Rodape() {
             <span className="text-slate-100 sm:text-center">© 2025 <a className="text-slate-100" href="https://flowbite.com/" >Flowbite™</a>. All Rights Reserved.
             </span>
            
-                <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 rounded-xl" href="./Suporte_J" >Contato</a>
+                {/* <a className=" px-6 py-3 bg-[#17223C] no-underline text-slate-100 rounded-xl" href="./Suporte_J" >Contato</a> */}
                 
       </div>
     </footer>
