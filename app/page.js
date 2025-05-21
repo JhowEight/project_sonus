@@ -1,10 +1,11 @@
 'use client'
+import axios from "axios";
 import Musicas from "./albuns_N/components/Albuns";
 import Artistas from "./artista_N/components/Artistas";
 import "./components/Musica.css"
 import Musica from "./components/Musicas";
 import Noticias from "./components/Noticias";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -35,8 +36,22 @@ export default function Home() {
     // ]);
 
 
-    const [musicas, alteraMusicas] = useState([
-        {
+    const [musicas, alteraMusicas] = useState([]);
+
+
+    async function  buscamusica(){
+      const res = await axios.get("http://localhost:4000/musica")
+      console.log(res.data)
+      alteraMusicas(res.data)
+    }
+
+
+    useEffect(()=>{
+      buscamusica()
+    }, [])
+
+    /*
+     {
             nomeMusica: "BAD",
             artista: "Michael Jackson",
             imagem: "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Michael_Jackson_-_Bad.png/220px-Michael_Jackson_-_Bad.png"
@@ -96,8 +111,7 @@ export default function Home() {
             artista: "Queen",
             imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           }
-        
-    ]);
+     */
 
     return ( 
 
@@ -111,7 +125,7 @@ export default function Home() {
                 <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto   ">{   
                     musicas.map((i)=>
                 
-                    <Musica nomeMusica={i.nomeMusica} artista={i.artista} imagem={i.imagem}/> 
+                    <Musica nomeMusica={i.nome} artista={i.artista.nome} imagem={i.img}/> 
                 
                 )
                     
