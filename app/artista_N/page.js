@@ -41,7 +41,6 @@ function Artista () {
       {selecionaArtista && (
         <div>
           
-          
           <div className="bg-[#362D58] w-[385px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
             <img className="rounded-xl  w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
           </div>
