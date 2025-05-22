@@ -1,10 +1,11 @@
 'use client'
+import axios from "axios";
 import Musicas from "./albuns_N/components/Albuns";
 import Artistas from "./artista_N/components/Artistas";
 import "./components/Musica.css"
 import Musica from "./components/Musicas";
 import Noticias from "./components/Noticias";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
@@ -91,8 +92,7 @@ export default function Home() {
             artista: "Queen",
             imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           }
-        
-    ]);
+    ])
 
     return ( 
 
