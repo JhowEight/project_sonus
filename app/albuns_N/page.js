@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import Cabecalho from "../components/Cabecalho";
 import Musica from "../components/Musicas";
+import host from '../lib/host';
 
 function Album () {
 
@@ -24,7 +25,7 @@ function Album () {
     useEffect(() => {
       async function fetchAlbumData() {
         try {
-          const response = await axios.get('http://localhost:4000/album');
+          const response = await axios.get(host+'/album');
           alteraAlbum(response.data);
         } catch (error) {
           console.error('Erro ao buscar dados do álbum:', error);

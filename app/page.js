@@ -6,6 +6,7 @@ import "./components/Musica.css"
 import Musica from "./components/Musicas";
 import Noticias from "./components/Noticias";
 import { useEffect, useState } from "react";
+import host from "./lib/host";
 
 
 
@@ -40,7 +41,7 @@ export default function Home() {
 
 
     async function  buscamusica(){
-      const res = await axios.get("http://localhost:4000/musica")
+      const res = await axios.get(host+"/musica")
       console.log(res.data)
       alteraMusicas(res.data)
     }

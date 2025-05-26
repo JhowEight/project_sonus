@@ -3,6 +3,7 @@
 import axios from "axios";
 
 import { useState } from "react";
+import host from "../lib/host";
  
 function Cadastro() {
 
@@ -16,7 +17,7 @@ function Cadastro() {
             console.log("Senha Cadastrada:"+senha);
             console.log("Nick Cadastrado:"+nickname);
 
-            const res = await axios.post('http://localhost:4000/usuario',{
+            const res = await axios.post(host+'/usuario',{
                 email: email,
                 senha: senha,
                 nickname: nickname

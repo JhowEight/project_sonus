@@ -30,7 +30,7 @@ function Login() {
 ]);
 
     async function buscaUsuarios() {
-        const res = await axios.get("http://localhost:4000/usuario")
+        const res = await axios.get(host+"/usuario")
         console.log(res.data)
         setUsuarios(res.data)
     }
