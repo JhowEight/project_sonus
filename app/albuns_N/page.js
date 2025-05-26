@@ -41,13 +41,13 @@ function Album () {
     return (
 
       <div>
-        <h2 className="text-white p-5 text-2xl font-bold">Álbuns</h2>
+        <h2 className="text-white justify center p-5 text-2xl font-bold">Álbuns</h2>
 
         {/* Lista álbuns */}
         <div className="text-white flex flex-wrap justify-start gap-8 p-5">
           {album.length > 0 ? (
           album.map((item, index) => (
-          <div key={index} className="border border-white/20 rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer hover:bg-[#4e3d7a] transition" onClick={() => handleAlbumClick(item)}>
+          <div key={index} className="border-solid border rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer hover:bg-[#4e3d7a] transition" onClick={() => handleAlbumClick(item)}>
             <h3 className="text-lg font-semibold">{item.nome}</h3>
           </div>
           ))

@@ -38,7 +38,7 @@ function Artista () {
 
     return ( 
         <div>
-
+            
             <br/>
             <h1 className=" text-white "> Artista</h1>
 

@@ -8,7 +8,9 @@ import Noticias from "./components/Noticias";
 import { useEffect, useState } from "react";
 
 
+
 export default function Home() {
+
 
     // const [artistas, alteraArtistas]=useState([
 
@@ -28,11 +30,28 @@ export default function Home() {
        
     //     imagemArtista: ""
     //   }
+      
+      
 
     // ]);
 
-    const [musicas, alteraMusicas] = useState([
-        {
+
+    const [musicas, alteraMusicas] = useState([]);
+
+
+    async function  buscamusica(){
+      const res = await axios.get("http://localhost:4000/musica")
+      console.log(res.data)
+      alteraMusicas(res.data)
+    }
+
+
+    useEffect(()=>{
+      buscamusica()
+    }, [])
+
+    /*
+     {
             nomeMusica: "BAD",
             artista: "Michael Jackson",
             imagem: "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Michael_Jackson_-_Bad.png/220px-Michael_Jackson_-_Bad.png"
@@ -92,51 +111,72 @@ export default function Home() {
             artista: "Queen",
             imagem: "https://i.ibb.co/qxC4W5M/beat-it.jpg"
           }
-    ])
+     */
 
     return ( 
 
-      <div>
-        <h1 className="text-white text-center">Seus amigos vão gostar disso!!</h1>
-
         <div>
-          <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto">{   
-            musicas.map((i)=>
-            <Musica nomeMusica={i.nomeMusica} artista={i.artista} imagem={i.imagem}/>
-          )}
-          </ul>
-          <br/>                
-          <br/>
-        </div>
 
-        <h1 className="text-white text-center ">Albuns para você</h1>
-        <br/>
+          
 
-        <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
 
-          <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
+            <h1 className="text-white text-center">Seus amigos vão gostar disso!!</h1>
+
+            <div >
+
+                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto   ">{   
+                    musicas.map((i)=>
+                
+                    <Musica nomeMusica={i.nome} artista={i.artista.nome} imagem={i.img}/> 
+                
+                )
+                    
+                    
+                    
+                }</ul>
+
+
+                <br/>                
+                <br/>
+                
+
+               </div>
+
+                <h1 className="text-white text-center ">Albuns para você</h1>
+                <br/>
+
+
+
+
+                <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
+
+                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
                   
-          <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
 
-          <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
 
-          <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>  
-        </div>
-        <br/>
-        <br/>
-        <br/>
-        <hr/>
+                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
 
-        <h1 className="text-white text-center">Noticias que soam como musicas</h1>
+                  
 
-        <div className="text-white">
-          <Noticias/>
-        </div>
+                </div>
+    <br/>
+    <br/>
+    <br/>
+    <hr/>
+    <h1 className="text-white text-center">Noticias que soam como musicas</h1>
 
-        <br/>
-        <hr/>
-        <br/>
+         <div className="text-white">
 
-      </div>
+            <Noticias/>
+         </div>
+
+    <br/>
+    <hr/>
+    <br/>
+
+
+    </div>
     );
 }
