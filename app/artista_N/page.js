@@ -31,43 +31,38 @@ function Artista () {
     };
 
 
-    return (
-
-        
-        <div>
-      <h1 className="text-white text-center p-5">Artista</h1>
-
-
-      {/* Detalhes do artista selecionado */}
-      {selecionaArtista && (
-        <div>
-          
-          <div className="bg-[#362D58] w-[385px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
-            <img className="rounded-xl  w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
-          </div>
-          <h1 className="text-white text-center text-4xl mt-5">{selecionaArtista.nome}</h1>
+  return (
+    <div>
+    {/* Detalhes do artista selecionado */}
+    {selecionaArtista && (
+      <div>
+        <h1 className="text-white text-center text-4xl mt-5">{selecionaArtista.nome}</h1>
+        <div className="bg-[#362D58] w-[385px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
+          <img className="rounded-xl  w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
         </div>
-      )}
-
-      {/* Exibe os artistas na lista */}
-      <div className="text-white flex flex-wrap justify-start gap-8 p-5">
-        {artista.length > 0 ? (
-          artista.map((item, index) => (
-            <div
-              key={index}
-              className="border-solid border rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer"
-              onClick={() => handleArtistaClick(item)} // Chama a função ao clicar no álbum
-            >
-              <h3>{item.nome}</h3>
-            </div>
-          ))
-        ) : (
-          <p>Carregando...</p>
-        )}
+        <h3 className="text-white text-center mt-5">Ouça Também</h3>
       </div>
+    )}
 
-      
+    
+
+    {/* Exibe os artistas na lista */}
+    <div className="text-white flex flex-wrap justify-start gap-8 p-5">
+      {artista.length > 0 ? (
+        artista.map((item, index) => (
+        <div
+          key={index}
+          className="border-solid border rounded-xl bg-[#362D58] p-5 w-60 cursor-pointer"
+          onClick={() => handleArtistaClick(item)} // Chama a função ao clicar no álbum
+        >
+          <h3>{item.nome}</h3>
+        </div>
+        ))
+      ) : (
+        <p>Carregando...</p>
+      )}
     </div>
+  </div>
 
  );
 }
