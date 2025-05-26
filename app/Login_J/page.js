@@ -1,6 +1,7 @@
 'use client'
 import axios from "axios";
 import { useEffect, useState } from "react";
+import host from "../lib/host";
 
 function Login() {
 
@@ -10,7 +11,7 @@ function Login() {
 
     async function buscaUsuarios() {
         try {
-            const res = await axios.get("http://localhost:4000/usuario");
+            const res = await axios.get(host+"/usuario");
             console.log(res.data);
             setUsuarios(res.data);
         } catch (error) {
