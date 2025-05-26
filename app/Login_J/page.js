@@ -9,35 +9,28 @@ function Login() {
     const [usuarios, setUsuarios] = useState([]);
 
     async function buscaUsuarios() {
-        try {
-            const res = await axios.get("http://localhost:4000/usuario");
-            console.log(res.data);
-            setUsuarios(res.data);
-        } catch (error) {
-            console.error("Erro ao buscar usuários:", error);
-            alert("Erro ao carregar usuários. Tente novamente mais tarde.");
-        }
+        const res = await axios.get("http://localhost:4000/usuario")
+        console.log(res.data)
+        setUsuarios(res.data)
     }
 
-    useEffect(() => {
-        buscaUsuarios();
-    }, []);
+    useEffect(()=> {
+        buscaUsuarios()
+    }, [] )
 
-    function salvar() {
-        const usuarioEncontrado = usuarios.find((u) => u.email === email && u.senha === senha);
-
-        if (usuarioEncontrado) {
-            console.log("Logado");
-            // Remover email e senha antes de guardar no localStorage
-            const { senha, email, ...resto } = usuarioEncontrado;
-            localStorage.setItem("usuario", JSON.stringify(resto));
-
-            alert("Login realizado com sucesso!");
-
-            window.location.href = "/";
-        } else {
-            alert("E-mail ou senha incorretos.");
-        }
+    function salvar(){
+        {
+            usuarios.map((u)=>{
+            
+            if(u.email == email && u.senha == senha){
+                console.log(" Logado");
+                u.senha = "";
+                u.email = "";
+                localStorage.setItem("usuario", JSON.stringify(u)); //Transforma objeto em texto pra ser guardado no storage local do navegador
+                window.location.href="/";
+            }}
+        
+        )};
     }
 
     return (

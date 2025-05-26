@@ -2,7 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
-
+ 
 function Cadastro() {
 
     const [email, setEmail] = useState("");
@@ -15,33 +15,21 @@ function Cadastro() {
             console.log("Senha Cadastrada:" + senha);
             console.log("Nick Cadastrado:" + nickname);
 
-            try {
-                const res = await axios.post('http://localhost:4000/usuario', {
-                    email: email,
-                    senha: senha,
-                    nickname: nickname
-                });
-
-                console.log("Cadastrado");
-
-                setSenha("");
-                setEmail("");
-                setNickname("");
-
-                localStorage.setItem("usuario", JSON.stringify(res.data));
-
-                alert("Cadastro realizado com sucesso!");
-
-                window.location.href = "/Login_J";
-
-            } catch (error) {
-                console.error("Erro ao cadastrar:", error);
-                alert("Erro ao realizar cadastro. Tente novamente.");
-            }
-        } else {
-            alert("Por favor, preencha todos os campos.");
+            const res = await axios.post('http://localhost:4000/usuario',{
+                email: email,
+                senha: senha,
+                nickname: nickname
+            })
+            console.log(" Cadastrado ");
+            setSenha("");
+            setEmail("");
+            setNickname("");
+            localStorage.setItem("usuario", JSON.stringify(res.data)); //Transforma objeto em texto pra ser guardado no storage local do navegador
+            window.location.href="/Login_J";
         }
+
     }
+
 
     return ( 
         <div className="flex justify-center">

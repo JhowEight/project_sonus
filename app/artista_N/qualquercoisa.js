@@ -3,9 +3,6 @@
 import { useState } from "react";
 import Artistas from "./components/Artistas";
 
-
-
-
 function Artista () {
 
     const[artista, alteraArtista] = useState(
@@ -16,7 +13,6 @@ function Artista () {
         bio: "O Black Sabbath é uma banda britânica formada em 1968 em Birmingham, Inglaterra, considerada a criadora do heavy metal. Com uma sonoridade sombria e riffs pesados, eles revolucionaram o rock e influenciaram gerações de banda.", 
         imagem: "black sabbath banda.jpg"
          }
-
     );
     
     const [albuns, alteraAlbuns] = useState([
@@ -42,7 +38,7 @@ function Artista () {
 
     return ( 
         <div>
-
+            
             <br/>
             <h1 className=" text-white "> Artista</h1>
 
@@ -57,7 +53,7 @@ function Artista () {
             </div>
 
             <br/>
-            <h2 className=" text-white ">Albúns</h2>
+            <h2 className=" text-white ">Álbuns</h2>
 
             <div className="flex bg-stone-950 overflow-x-auto w-full">         
 
