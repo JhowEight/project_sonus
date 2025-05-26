@@ -16,7 +16,7 @@ function Cadastro() {
             console.log("Nick Cadastrado:" + nickname);
 
             try {
-                const res = await axios.post('http://localhost:4000/usuario', {
+                const res = await axios.post(host+'/usuario', {
                     email: email,
                     senha: senha,
                     nickname: nickname
