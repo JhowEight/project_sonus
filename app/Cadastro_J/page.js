@@ -2,6 +2,7 @@
 
 import axios from "axios";
 import { useState } from "react";
+import host from "../lib/host";
 
 function Cadastro() {
 
