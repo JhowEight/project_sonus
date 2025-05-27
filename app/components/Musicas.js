@@ -9,7 +9,7 @@ function Musica(attr) {
             <div >
             <button> <img src={attr.imagem}/>  </button>
             <h3> {attr.nomeMusica} <b/></h3>  
-            <p>{attr.artista} </p> 
+         
          
             
             </div>    
