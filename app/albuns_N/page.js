@@ -8,17 +8,6 @@ import host from '../lib/host';
 
 function Album () {
 
-    const [musica, alteraMusica] = useState([
-    { id: 0, nome: "Neon Knights", duracao: "3:51" },
-    { id: 1, nome: "Children of the Sea", duracao: "5:34" },
-    { id: 2, nome: "Lady Evil", duracao: "4:26" },
-    { id: 3, nome: "Heaven and Hell", duracao: "6:59" },
-    { id: 4, nome: "Wishing Well", duracao: "4:07" },
-    { id: 5, nome: "Die Young", duracao: "4:41" },
-    { id: 6, nome: "Walk Away", duracao: "4:26" },
-    { id: 7, nome: "Lonely Is the Word", duracao: "5:53" }
-    ])
-
     const [album, alteraAlbum] = useState([]);
     const [selecionaAlbum, alteraSelecionaAlbum] = useState(null); // Estado para o álbum selecionado
 
@@ -26,6 +15,7 @@ function Album () {
       async function fetchAlbumData() {
         try {
           const response = await axios.get(host+'/album');
+          console.log(response.data)
           alteraAlbum(response.data);
         } catch (error) {
           console.error('Erro ao buscar dados do álbum:', error);
@@ -70,7 +60,16 @@ function Album () {
                 <p className="text-xl text-justify">
                   {selecionaAlbum.descricao}
                 </p>
-
+                <hr/>
+                <ul className='list-none pl-0' >
+                {
+                  selecionaAlbum.musicas.map(i => 
+                    <li className='bg-zinc-900 p-1 px-10 my-1' >
+                      <p><strong>{i.nome}</strong> - <em>{i.tempo}</em> </p>
+                      </li>
+                  )
+                }
+                </ul>
               </div>
             </div>
           </div>
