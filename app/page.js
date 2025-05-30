@@ -38,39 +38,34 @@ export default function Home() {
 
             <div >
 
-                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto   ">{   
-                    musicas.map((i)=>
+                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto">{   
+                    musicas.map((i)=> 
                 
-                    <Musica nomeMusica={i.nome} imagem={i.img}/> 
+                    <Musica nomeMusica={i.nome} imagem={i.url_imagem}/> 
                 
-                )
-                    
-                    
+                )  
                     
                 }</ul>
 
-
                 <br/>                
                 <br/>
-                
 
-               </div>
+            </div>
 
                 <h1 className="text-white text-center ">Albuns para você</h1>
                 <br/>
-
-
 
 
                 <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
 
                   <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
                   
-                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
 
-                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
 
-                  <button className="rounded-xl bg-[#362D58] p-10 "> <img src="/imagens/heaven in hell.jpg"/> </button>
+                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
+
 
                   
 
