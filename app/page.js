@@ -38,14 +38,14 @@ export default function Home() {
 
             <div >
 
-                <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto">{   
-                    musicas.map((i)=> 
-                
-                    <Musica nomeMusica={i.nome} imagem={i.url_imagem}/> 
-                
-                )  
-                    
-                }</ul>
+            <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto">
+              {
+                musicas.slice(0, 5).map((i) => 
+                  <Musica key={i.id} nomeMusica={i.nome} imagem={i.url_imagem}/> 
+                )
+              }
+            </ul>
+
 
                 <br/>                
                 <br/>
