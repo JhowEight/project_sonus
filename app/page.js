@@ -56,6 +56,8 @@ export default function Home() {
                 <br/>
 
 
+
+
                 <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
 
                   <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
