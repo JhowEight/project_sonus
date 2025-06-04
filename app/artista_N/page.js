@@ -37,8 +37,13 @@ function Artista () {
     {selecionaArtista && (
       <div>
         <h1 className="text-white text-center text-4xl mt-5">{selecionaArtista.nome}</h1>
-        <div className="bg-[#362D58] w-[385px] rounded-xl w-full flex text-white p-5 mx-auto mt-5">
+        <div className="bg-[#362D58] max-w-7xl rounded-xl w-full flex flex-col md:flex-row text-white p-5">
           <img className="rounded-xl  w-96" src={selecionaArtista.url_imagem} alt={selecionaArtista.nome}/>
+            <div className="p-4 md:ml-4 mt-4 md:mt-0 rounded-xl bg-[#1b2021] flex-1">
+            <p className="text-xl text-justify overflow-visible break-words">
+                  {selecionaArtista.descricao}
+            </p>
+            </div>
         </div>
         <h3 className="text-white text-center mt-5">Ouça Também</h3>
       </div>
