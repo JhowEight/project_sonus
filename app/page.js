@@ -40,9 +40,14 @@ export default function Home() {
 
             <ul className="musica bg-zinc-80 gap-5 rounded-xl overflow-x-auto">
               {
-                musicas.slice(0, 5).map((i) => 
-                  <Musica key={i.id} nomeMusica={i.nome} imagem={i.url_imagem}/> 
+                musicas
+                .filter((musica, index, self) =>
+                  index === self.findIndex((m) => m.id_album === musica.id_album)
                 )
+                .slice(0, 5)
+                .map((musica) => (
+                <Musica key={musica.id} nomeMusica={musica.nome} imagem={musica.url_imagem} />
+              ))
               }
             </ul>
 
@@ -52,26 +57,8 @@ export default function Home() {
 
             </div>
 
-                <h1 className="text-white text-center ">Albuns para você</h1>
-                <br/>
+               
 
-
-
-
-                <div className=" musica bg-zinc-80 gap-5 rounded-xl ">
-
-                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
-                  
-                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
-
-                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
-
-                  <a  href="./albuns_N"> <button className="rounded-xl bg-[#362D58] p-10 ">  <img src="/imagens/heaven in hell.jpg"/> </button></a>
-
-
-                  
-
-                </div>
     <br/>
     <br/>
     <br/>
